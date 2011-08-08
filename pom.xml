@@ -8,10 +8,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.paris.lutece.plugins</groupId>
-	<artifactId>plugin-moduleformincludeopengraph</artifactId>
+	<artifactId>module-form-include-opengraph</artifactId>
 	<packaging>lutece-plugin</packaging>
 	<version>0.0.3-SNAPSHOT</version>
-	<name>Lutece Moduleformincludeopengraph plugin</name>
+	<name>Lutece form include opengraph module</name>
 
 	<repositories>
 	  <repository>
@@ -38,7 +38,7 @@
 	</dependencies>
 
 	<properties>
-		<componentName>moduleformincludeopengraph</componentName>
+		<componentName>form-include-opengraph</componentName>
 		<jiraProjectName>LUTECE</jiraProjectName>
 		<jiraComponentId>10036</jiraComponentId>
 	</properties>
