@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<plug-in>
+	<name>moduleformincludeopengraph</name>
+	<class>fr.paris.lutece.portal.service.plugin.PluginDefaultImplementation</class>
+	<version>1.0</version>
+	<documentation></documentation>
+	<installation></installation>
+	<changes></changes>
+	<user-guide></user-guide>
+	<description>moduleformincludeopengraph.plugin.description</description>
+	<provider>moduleformincludeopengraph.plugin.provider</provider>
+	<provider-url>http://dev.lutece.paris.fr/</provider-url>
+	<icon-url>images/admin/skin/plugins/html/modules/rest/html-rest.png</icon-url>
+	<copyright></copyright>
+	<db-pool-required>0</db-pool-required>
+    <page-include-services>
+        <page-include-service>
+            <page-include-service-id>formopendata</page-include-service-id>
+            <page-include-service-class>fr.paris.lutece.plugins.moduleformincludeopengraph.web.FormOpenGraphInclude</page-include-service-class>
+        </page-include-service>
+    </page-include-services>
+</plug-in>
+
