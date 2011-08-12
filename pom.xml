@@ -39,8 +39,8 @@
 
 	<properties>
 		<componentName>form-include-opengraph</componentName>
-		<jiraProjectName>LUTECE</jiraProjectName>
-		<jiraComponentId>10036</jiraComponentId>
+		<jiraProjectName>FORMOPENGRAPH</jiraProjectName>
+		<jiraComponentId>10579</jiraComponentId>
 	</properties>
 
 	<scm>
