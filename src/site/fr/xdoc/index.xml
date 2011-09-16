@@ -5,13 +5,15 @@
 	</properties>
 	<body>
 		<section name="Description">
-			<p>Include open graph tags (aka facebook) in form pages.</p>
+			<subsection name="Introduction">
+			<p>Permet d'ajouter les headers html opengraph (aka facebook) aux pages générer par le plugin-form.</p>
 			<p>
 				Add the following code to page_frameset.html
 				<pre>
 					${form_og?default("<!-- module-form-include-opengraph not installed -->")}
 				</pre>
 			</p>
+			</subsection>
 		</section>
 	</body>
 </document>
