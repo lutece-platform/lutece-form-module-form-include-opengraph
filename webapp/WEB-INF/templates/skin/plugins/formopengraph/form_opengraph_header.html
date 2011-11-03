@@ -1,7 +1,7 @@
 
-	<meta property="og:title" content="${form.title}"/>
+	<meta property="og:title" content="${form.title!}"/>
 	<meta property="og:image" content="images/logo.png"/>
-	<meta property="og:description" content="${form.description}"/>
-	<meta property="og:url" content="${url}?page=form&id_form=${form.idForm}"/>
+	<meta property="og:description" content="${form.description!}"/>
+	<meta property="og:url" content="${url!}"/>
 	
-	<link rel="canonical" href="${url}?page=form&id_form=${form.idForm}" />
+	<link rel="canonical" href="${url!}" />

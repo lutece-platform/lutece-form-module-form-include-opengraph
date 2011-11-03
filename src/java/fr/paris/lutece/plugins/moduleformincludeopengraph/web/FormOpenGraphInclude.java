@@ -57,7 +57,11 @@ public class FormOpenGraphInclude implements PageInclude
     private static final String FORM2 = "form";
     private static final String URL = "url";
     private static final String FORM_OG = "form_og";
+    private static final String FORM_OG_FACEBOOK = "form_og_facebook";
+    private static final String FORM_OG_GOOGLE = "form_og_google";
     private static final String _OG_H = "skin/plugins/formopengraph/form_opengraph_header.html";
+    private static final String _OG_B_FACEBOOK = "skin/plugins/formopengraph/form_opengraph_body_facebook.html";
+    private static final String _OG_B_GOOGLE = "skin/plugins/formopengraph/form_opengraph_body_google.html";
 
     /**
     * Substitue specific Freemarker markers in the page template.
@@ -70,21 +74,31 @@ public class FormOpenGraphInclude implements PageInclude
     {
         try
         {
-            String strUrl = request.getRequestURL(  ).toString(  );
+        	String strUrl = request.getRequestURL(  ).toString(  );
 
             int nIdForm = Integer.parseInt( request.getParameter( ID_FORM ) );
             Form form = FormHome.findByPrimaryKey( nIdForm, PluginService.getPlugin( FormPlugin.PLUGIN_NAME ) );
             Map<String, Object> model = new HashMap<String, Object>(  );
-            model.put( URL, strUrl );
+            model.put( URL, strUrl + "&amp;id_form=" + form.getIdForm( ) );
             model.put( FORM2, form );
 
             HtmlTemplate template = AppTemplateService.getTemplate( _OG_H, request.getLocale(  ), model );
             rootModel.put( FORM_OG, template.getHtml(  ) );
+            
+            template = AppTemplateService.getTemplate( _OG_B_FACEBOOK, request.getLocale(  ), model );
+            rootModel.put( FORM_OG_FACEBOOK, template.getHtml(  ) );
+            
+            template = AppTemplateService.getTemplate( _OG_B_GOOGLE, request.getLocale(  ), model );
+            rootModel.put( FORM_OG_GOOGLE, template.getHtml(  ) );
         }
         catch ( Exception e )
         {
             //if error, no header include
             rootModel.put( FORM_OG, "" );
+            //if error, no body for facebook include
+            rootModel.put( FORM_OG_FACEBOOK, "" );
+            //if error, no body for google include
+            rootModel.put( FORM_OG_GOOGLE, "" );
         }
     }
 }

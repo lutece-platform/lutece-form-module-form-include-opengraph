@@ -8,9 +8,22 @@
 			<subsection name="Introduction">
 				<p>Include open graph tags (aka facebook) in form pages.</p>
 				<p>
-					Add the following code to page_frameset.html
+					Add the following code to page_frameset.html in header
 					<pre>
 						${form_og?default("<!-- module-form-include-opengraph not installed -->")}
+						Add this meta if needed :
+						meta content="YOUR_TYPE" property="og:type"
+						meta content="YOUR_SITE_NAME" property="og:site_name"
+						meta content="YOUR_LATITUDE" property="og:latitude"
+						meta content="YOUR_LONGITUDE" property="og:longitude"
+					</pre>
+					Add the following code to page_frameset.html in body where you want the facebook button "j'aime"
+					<pre>
+						${form_og_facebook?default("<!-- module-form-include-opengraph not installed -->")}
+					</pre>
+					Add the following code to page_frameset.html in body where you want the google button "+1"
+					<pre>
+						${form_og_google?default("<!-- module-form-include-opengraph not installed -->")}
 					</pre>
 				</p>
 			</subsection>
