@@ -79,7 +79,7 @@ public class FormOpenGraphInclude implements PageInclude
             int nIdForm = Integer.parseInt( request.getParameter( ID_FORM ) );
             Form form = FormHome.findByPrimaryKey( nIdForm, PluginService.getPlugin( FormPlugin.PLUGIN_NAME ) );
             Map<String, Object> model = new HashMap<String, Object>(  );
-            model.put( URL, strUrl + "&amp;id_form=" + form.getIdForm( ) );
+            model.put( URL, strUrl + "?page=form&amp;id_form=" + form.getIdForm( ) );
             model.put( FORM2, form );
 
             HtmlTemplate template = AppTemplateService.getTemplate( _OG_H, request.getLocale(  ), model );
