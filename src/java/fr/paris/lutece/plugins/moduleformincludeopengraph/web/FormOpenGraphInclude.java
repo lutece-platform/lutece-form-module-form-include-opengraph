@@ -57,6 +57,7 @@ public class FormOpenGraphInclude implements PageInclude
     private static final String ID_FORM = "id_form";
     private static final String FORM2 = "form";
     private static final String URL = "url";
+    private static final String BASE_URL = "base_url";
     private static final String FORM_OG = "form_og";
     private static final String FORM_OG_FACEBOOK = "form_og_facebook";
     private static final String FORM_OG_GOOGLE = "form_og_google";
@@ -75,12 +76,14 @@ public class FormOpenGraphInclude implements PageInclude
     {
         try
         {
+            Map<String, Object> model = new HashMap<String, Object>(  );
+            
         	String strUrl = AppPathService.getBaseUrl( request );
+        	model.put( BASE_URL, strUrl );
         	strUrl += "jsp/site/Portal.jsp";
 
             int nIdForm = Integer.parseInt( request.getParameter( ID_FORM ) );
             Form form = FormHome.findByPrimaryKey( nIdForm, PluginService.getPlugin( FormPlugin.PLUGIN_NAME ) );
-            Map<String, Object> model = new HashMap<String, Object>(  );
             model.put( URL, strUrl + "?page=form&amp;id_form=" + form.getIdForm( ) );
             model.put( FORM2, form );
 
