@@ -40,6 +40,7 @@ import fr.paris.lutece.portal.service.content.PageData;
 import fr.paris.lutece.portal.service.includes.PageInclude;
 import fr.paris.lutece.portal.service.plugin.PluginService;
 import fr.paris.lutece.portal.service.template.AppTemplateService;
+import fr.paris.lutece.portal.service.util.AppPathService;
 import fr.paris.lutece.util.html.HtmlTemplate;
 
 import java.util.HashMap;
@@ -74,7 +75,8 @@ public class FormOpenGraphInclude implements PageInclude
     {
         try
         {
-        	String strUrl = request.getRequestURL(  ).toString(  );
+        	String strUrl = AppPathService.getBaseUrl( request );
+        	strUrl += "jsp/site/Portal.jsp";
 
             int nIdForm = Integer.parseInt( request.getParameter( ID_FORM ) );
             Form form = FormHome.findByPrimaryKey( nIdForm, PluginService.getPlugin( FormPlugin.PLUGIN_NAME ) );
