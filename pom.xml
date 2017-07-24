@@ -9,7 +9,7 @@
     <groupId>fr.paris.lutece.plugins</groupId>
     <artifactId>module-form-include-opengraph</artifactId>
     <packaging>lutece-plugin</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>Lutece form include opengraph module</name>
     <repositories>
         <repository>
@@ -36,6 +36,6 @@
         <connection>scm:git:https://github.com/lutece-platform/lutece-form-module-form-include-opengraph.git</connection>
         <developerConnection>scm:git:https://github.com/lutece-platform/lutece-form-module-form-include-opengraph.git</developerConnection>
         <url>https://github.com/lutece-platform/lutece-form-module-form-include-opengraph.git</url>
-      <tag>lutece-form-module-form-include-opengraph-1.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
